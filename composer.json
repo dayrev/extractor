@@ -1,0 +1,23 @@
+{
+    "name": "dayrev/extractor",
+    "description": "Web page content extractor.",
+    "keywords": ["extractor", "crawler", "scraper", "php"],
+    "type": "library",
+    "homepage": "https://github.com/dayrev/extractor",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Daniel Sposito",
+            "email": "daniel.g.sposito@gmail.com",
+            "homepage": "https://github.com/dsposito"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.0",
+        "embedly/embedly-php": "0.5.*",
+        "scotteh/php-goose": "0.3.*"
+    },
+    "autoload": {
+        "psr-4": {"Extractor\\": "src/"}
+    }
+}

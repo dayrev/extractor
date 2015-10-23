@@ -54,4 +54,13 @@ abstract class Provider
             }
         }
     }
+
+    /**
+     * Extracts content for a given URL.
+     *
+     * @param string $url The URL to extract content from.
+     *
+     * @return Content
+     */
+    abstract public function extract($url) {}
 }

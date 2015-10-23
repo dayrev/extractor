@@ -1,5 +1,6 @@
 {
     "name": "dayrev/extractor",
+    "version": "1.0.0",
     "description": "Web page content extractor.",
     "keywords": ["extractor", "crawler", "scraper", "php"],
     "type": "library",

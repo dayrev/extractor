@@ -26,8 +26,10 @@ class Embedly extends Provider
             'key' => $this->api_key,
         ));
 
+        $data = $extractor->extract(array('url' => $url));
+
         $content = new Content();
-        $content->text = $extractor->extract(array('url' => $url));
+        $content->text = $data[0]->content;
 
         return $content;
     }

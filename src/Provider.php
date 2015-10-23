@@ -62,5 +62,5 @@ abstract class Provider
      *
      * @return Content
      */
-    abstract public function extract($url) {}
+    abstract public function extract($url);
 }

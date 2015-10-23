@@ -14,8 +14,8 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "embedly/embedly-php": "0.5.*",
-        "scotteh/php-goose": "0.3.*"
+        "embedly/embedly-php": "dev-master",
+        "scotteh/php-goose": "dev-master"
     },
     "autoload": {
         "psr-4": {"Extractor\\": "src/"}

@@ -2,7 +2,7 @@
 
 namespace Extractor\Provider;
 
-use Embedly\Embedly;
+use Embedly\Embedly as EmbedlySDK;
 use Extractor\Content;
 use Extractor\Provider;
 
@@ -22,7 +22,7 @@ class Embedly extends Provider
      */
     public function extract($url)
     {
-        $extractor = new Embedly(array(
+        $extractor = new EmbedlySDK(array(
             'key' => $this->api_key,
         ));
 

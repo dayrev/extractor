@@ -1,14 +1,13 @@
 {
     "name": "dayrev/extractor",
+    "type": "library",
     "description": "Web page content extractor.",
     "keywords": ["extractor", "crawler", "scraper", "php"],
-    "type": "library",
-    "homepage": "https://github.com/dayrev/extractor",
+    "homepage": "https://bitbucket.org/dayrev/extractor",
     "license": "MIT",
     "authors": [
         {
             "name": "Daniel Sposito",
-            "email": "daniel.g.sposito@gmail.com",
             "homepage": "https://github.com/dsposito"
         }
     ],

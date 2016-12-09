@@ -2,8 +2,8 @@
 
 namespace DayRev\Extractor\Provider;
 
-use Extractor\Content;
-use Extractor\Provider;
+use DayRev\Extractor\Content;
+use DayRev\Extractor\Provider;
 use Goose\Client as GooseSDK;
 
 /**

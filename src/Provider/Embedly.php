@@ -2,9 +2,9 @@
 
 namespace DayRev\Extractor\Provider;
 
+use DayRev\Extractor\Content;
+use DayRev\Extractor\Provider;
 use Embedly\Embedly as EmbedlySDK;
-use Extractor\Content;
-use Extractor\Provider;
 
 /**
  * Driver class that handles Embedly interactions.

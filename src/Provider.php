@@ -1,6 +1,6 @@
 <?php
 
-namespace Extractor;
+namespace DayRev\Extractor;
 
 /**
  * Adapter class that handles extractor provider interactions.
@@ -29,7 +29,7 @@ abstract class Provider
      * Initializes the class.
      *
      * @param array $data
-     * 
+     *
      * @return void
      */
     public function __construct(array $data = array())

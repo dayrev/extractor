@@ -9,5 +9,5 @@ Extractor provides an elegant interface to extract content from a URL using a va
 
 ##Usage
 
-    $extractor = Extractor\Provider::instance('embedly', array('api_key' => 'YOURKEYHERE'));
+    $extractor = DayRev\Extractor\Provider::instance('embedly', array('api_key' => 'YOURKEYHERE'));
     $content = $extractor->extract($this->url)->text;

@@ -17,6 +17,6 @@
         "scotteh/php-goose": "dev-master"
     },
     "autoload": {
-        "psr-4": {"Extractor\\": "src/"}
+        "psr-4": {"DayRev\\Extractor\\": "src/"}
     }
 }

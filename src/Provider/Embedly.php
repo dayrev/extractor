@@ -1,6 +1,6 @@
 <?php
 
-namespace Extractor\Provider;
+namespace DayRev\Extractor\Provider;
 
 use Embedly\Embedly as EmbedlySDK;
 use Extractor\Content;

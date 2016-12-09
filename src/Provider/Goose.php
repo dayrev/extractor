@@ -1,6 +1,6 @@
 <?php
 
-namespace Extractor\Provider;
+namespace DayRev\Extractor\Provider;
 
 use Extractor\Content;
 use Extractor\Provider;

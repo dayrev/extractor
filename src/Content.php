@@ -1,6 +1,6 @@
 <?php
 
-namespace Extractor;
+namespace DayRev\Extractor;
 
 /**
  * Handles various extracted content types.

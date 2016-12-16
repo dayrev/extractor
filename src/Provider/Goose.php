@@ -18,7 +18,7 @@ class Goose extends Provider
      *
      * @return Content
      */
-    public function extract($url)
+    public function extract(string $url)
     {
         $extractor = new GooseSDK(get_object_vars($this));
         $data = $extractor->extractContent($url);

@@ -20,7 +20,7 @@ class Embedly extends Provider
      *
      * @return Content
      */
-    public function extract($url)
+    public function extract(string $url)
     {
         $extractor = new EmbedlySDK(array(
             'key' => $this->api_key,

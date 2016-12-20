@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": "^7.0",
-        "embedly/embedly-php": "dev-master",
+        "embedly/embedly-php": "^0.5",
         "scotteh/php-goose": "^0.4"
     },
     "autoload": {

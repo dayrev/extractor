@@ -8,6 +8,13 @@ namespace DayRev\Extractor;
 abstract class Provider
 {
     /**
+     * The driver's extractor.
+     *
+     * @var object
+     */
+    protected $extractor;
+
+    /**
      * Gets an instance of the given provider.
      *
      * @param string $provider The name of the provider to instantiate.

@@ -12,6 +12,20 @@ use Goose\Client as GooseSDK;
 class Goose extends Provider
 {
     /**
+     * Initializes the class.
+     *
+     * @param array $data
+     *
+     * @return void
+     */
+    public function __construct(array $data = array())
+    {
+        parent::__construct($data);
+
+        $this->extractor = new GooseSDK(get_object_vars($this));
+    }
+
+    /**
      * Extracts content for a given URL.
      *
      * @param string $url The URL to extract content from.
@@ -20,8 +34,7 @@ class Goose extends Provider
      */
     public function extract(string $url): Content
     {
-        $extractor = new GooseSDK(get_object_vars($this));
-        $data = $extractor->extractContent($url);
+        $data = $this->extractor->extractContent($url);
 
         $content = new Content();
         $content->text = $data->getCleanedArticleText();

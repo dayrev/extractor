@@ -11,7 +11,28 @@ use Embedly\Embedly as EmbedlySDK;
  */
 class Embedly extends Provider
 {
+    /**
+     * Embedly API key.
+     *
+     * @var string
+     */
     protected $api_key;
+
+    /**
+     * Initializes the class.
+     *
+     * @param array $data
+     *
+     * @return void
+     */
+    public function __construct(array $data = array())
+    {
+        parent::__construct($data);
+
+        $this->extractor = new EmbedlySDK(array(
+            'key' => $this->api_key,
+        ));
+    }
 
     /**
      * Extracts content for a given URL.
@@ -22,11 +43,7 @@ class Embedly extends Provider
      */
     public function extract(string $url): Content
     {
-        $extractor = new EmbedlySDK(array(
-            'key' => $this->api_key,
-        ));
-
-        $data = $extractor->extract(array('url' => $url));
+        $data = $this->extractor->extract(array('url' => $url));
 
         $content = new Content();
         $content->text = $data[0]->content;

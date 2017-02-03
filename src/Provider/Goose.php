@@ -14,7 +14,7 @@ class Goose extends Provider
     /**
      * Initializes the class.
      *
-     * @param array $data
+     * @param array $data Key value data to populate object properties.
      *
      * @return void
      */

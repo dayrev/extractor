@@ -22,7 +22,7 @@ class Goose extends Provider
     {
         parent::__construct($data);
 
-        $this->extractor = new GooseSDK(get_object_vars($this));
+        $this->extractor = new GooseSDK($data);
     }
 
     /**

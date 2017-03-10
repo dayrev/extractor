@@ -18,7 +18,7 @@ class Goose extends Provider
      *
      * @return void
      */
-    public function __construct(array $data = array())
+    public function __construct(array $data = [])
     {
         parent::__construct($data);
 

@@ -29,7 +29,7 @@ class ProviderTest extends \PHPUnit_Framework_TestCase
 
     public function testProviderMetaDataIsSet()
     {
-        $provider = Provider::instance('embedly', array('api_key' => 'SDGJ8924TFDSF713J'));
+        $provider = Provider::instance('embedly', ['api_key' => 'SDGJ8924TFDSF713J']);
 
         $this->assertObjectHasAttribute('api_key', $provider);
         $this->assertAttributeEquals('SDGJ8924TFDSF713J', 'api_key', $provider);

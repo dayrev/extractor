@@ -25,13 +25,13 @@ class Embedly extends Provider
      *
      * @return void
      */
-    public function __construct(array $data = array())
+    public function __construct(array $data = [])
     {
         parent::__construct($data);
 
-        $this->extractor = new EmbedlySDK(array(
+        $this->extractor = new EmbedlySDK([
             'key' => $this->api_key,
-        ));
+        ]);
     }
 
     /**
@@ -43,7 +43,7 @@ class Embedly extends Provider
      */
     public function extract(string $url): Content
     {
-        $data = $this->extractor->extract(array('url' => $url));
+        $data = $this->extractor->extract(['url' => $url]);
 
         $content = new Content();
         $content->text = $this->cleanText($data[0]->content);

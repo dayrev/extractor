@@ -1,16 +1,28 @@
+# Extractor
+
 ## Overview
 
-Extractor provides an elegant interface to extract content from a URL using a variety of third-party tools and services.
+Extractor provides an elegant interface to extract content from a URL using a variety of third-party providers.
 
-**Supported Providers:**
+**Supported Providers**
 
  * Embedly
  * Goose
 
-##Usage
+## Installation
+Run the following [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) command to add the package to your project:
 
-    $extractor = DayRev\Extractor\Provider::instance('embedly', array('api_key' => 'YOURKEYHERE'));
-    $content = $extractor->extract($this->url);
+```
+composer require dayrev/extractor
+```
+
+Alternatively, add `"dayrev/extractor": "^1.0"` to your composer.json file.
+
+##Usage
+```php
+$extractor = DayRev\Extractor\Provider::instance('embedly', ['api_key' => 'YOURKEYHERE']);
+$content = $extractor->extract($this->url);
+```
 
 ## Tests
 To run the test suite, run the following commands from the root directory:

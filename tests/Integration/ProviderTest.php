@@ -4,9 +4,6 @@ namespace DayRev\Extractor\Tests\Integration;
 
 use DayRev\Extractor\Content;
 use DayRev\Extractor\Provider;
-use Mockery;
-use ReflectionProperty;
-use stdClass;
 
 class ProviderTest extends TestCase
 {
@@ -16,42 +13,31 @@ class ProviderTest extends TestCase
         $content = $provider->extract('http://www.espn.com/espn/wire/_/section/ncf/id/18398497');
 
         $this->assertInstanceOf('DayRev\Extractor\Content', $content);
-        $this->assertEquals($this->getExpectedContentText(), $content->text);
+        $this->assertEquals($this->getExpectedGooseExtractedContent(), $content);
     }
 
     public function testEmbedlyExtractsExpectedContent()
     {
-        $extractor = Mockery::mock('Embedly\Embedly', array('api_key' => 'SDGJ8924TFDSF713J'))
-            ->shouldReceive('extract')
-            ->andReturn($this->getEmbedlyExtractedContent())
-            ->getMock();
-
-        $provider = Provider::instance('embedly');
-        $this->setProtectedProviderProperty($provider, 'extractor', $extractor);
-
+        $provider = Provider::instance('embedly', ['api_key' => $this->config['embedly_api_key']]);
         $content = $provider->extract('http://www.espn.com/espn/wire/_/section/ncf/id/18398497');
 
         $this->assertInstanceOf('DayRev\Extractor\Content', $content);
-        $this->assertEquals($this->getExpectedContentText(), $content->text);
+        $this->assertEquals($this->getExpectedEmbedlyExtractedContent(), $content);
     }
 
-    protected function setProtectedProviderProperty(Provider $provider, string $property, $value)
+    protected function getExpectedGooseExtractedContent(): Content
     {
-        $reflected_property = new ReflectionProperty(get_class($provider), $property);
-        $reflected_property->setAccessible(true);
-        $reflected_property->setValue($provider, $value);
+        $content = new Content();
+        $content->text = file_get_contents(__DIR__ . '/../Data/extracted-text-goose.txt');
+
+        return $content;
     }
 
-    protected function getEmbedlyExtractedContent(): array
+    protected function getExpectedEmbedlyExtractedContent(): Content
     {
-        $data = new stdClass();
-        $data->content = $this->getExpectedContentText();
+        $content = new Content();
+        $content->text = file_get_contents(__DIR__ . '/../Data/extracted-text-embedly.txt');
 
-        return array($data);
-    }
-
-    protected function getExpectedContentText(): string
-    {
-        return file_get_contents(__DIR__ . '/../Data/extracted-text.txt');
+        return $content;
     }
 }

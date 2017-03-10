@@ -46,8 +46,24 @@ class Embedly extends Provider
         $data = $this->extractor->extract(array('url' => $url));
 
         $content = new Content();
-        $content->text = $data[0]->content;
+        $content->text = $this->cleanText($data[0]->content);
 
         return $content;
+    }
+
+    /**
+     * Cleans text by removing HTML tags and trailing whitespace.
+     *
+     * @param string $text The text to clean.
+     *
+     * @return string
+     */
+    private function cleanText(string $text): string
+    {
+        $text = str_replace('<p>', '', $text);
+        $text = str_replace('</p>', "\n", $text);
+        $text = strip_tags($text);
+
+        return trim($text);
     }
 }

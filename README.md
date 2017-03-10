@@ -24,7 +24,7 @@ Alternatively, add `"dayrev/extractor": "^1.0"` to your composer.json file.
 ##Usage
 ```php
 $extractor = DayRev\Extractor\Provider::instance('embedly', ['api_key' => 'YOURKEYHERE']);
-$content = $extractor->extract($this->url);
+$content = $extractor->extract('http://www.espn.com/espn/wire/_/section/ncf/id/18398497');
 ```
 
 ## Tests

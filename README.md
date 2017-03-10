@@ -6,8 +6,8 @@ Extractor provides an elegant interface to extract content from a URL using a va
 
 **Supported Providers**
 
- * Embedly
- * Goose
+ * [Embedly](https://github.com/embedly/embedly-php)
+ * [Goose](https://github.com/scotteh/php-goose)
 
 ## Installation
 Run the following [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) command to add the package to your project:

@@ -1,7 +1,7 @@
 {
     "name": "dayrev/extractor",
     "type": "library",
-    "description": "Web page content extractor.",
+    "description": "Web Page Content Extractor",
     "keywords": ["extractor", "crawler", "scraper", "php", "embedly", "goose"],
     "homepage": "https://github.org/dayrev/extractor",
     "license": "MIT",

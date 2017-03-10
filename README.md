@@ -1,4 +1,7 @@
 # Extractor
+[![Build Status](https://travis-ci.org/dayrev/extractor.svg?branch=master)](https://travis-ci.org/dayrev/extractor)
+[![Coverage Status](https://coveralls.io/repos/github/dayrev/extractor/badge.svg?branch=master)](https://coveralls.io/github/dayrev/extractor?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/dayrev/extractor/v/stable.png)](https://packagist.org/packages/dayrev/extractor)
 
 ## Overview
 

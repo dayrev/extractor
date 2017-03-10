@@ -13,9 +13,11 @@ Extractor provides an elegant interface to extract content from a URL using a va
     $content = $extractor->extract($this->url);
 
 ## Tests
-To run the test suite, install [composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx) and then run the following commands from the root directory:
+To run the test suite, run the following commands from the root directory:
 
 ```
 composer install
-vendor/bin/phpunit
+vendor/bin/phpunit -d embedly_api_key=YOUR_EMBEDLY_API_KEY
 ```
+
+> **Note:** A valid Embedly API key is required when running the integration tests.

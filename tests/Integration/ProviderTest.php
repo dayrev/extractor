@@ -12,7 +12,7 @@ class ProviderTest extends TestCase
         $provider = Provider::instance('goose');
         $content = $provider->extract('http://www.espn.com/espn/wire/_/section/ncf/id/18398497');
 
-        $this->assertInstanceOf('DayRev\Extractor\Content', $content);
+        $this->assertInstanceOf(Content::class, $content);
         $this->assertEquals($this->getExpectedGooseExtractedContent(), $content);
     }
 
@@ -21,7 +21,7 @@ class ProviderTest extends TestCase
         $provider = Provider::instance('embedly', ['api_key' => $this->config['embedly_api_key']]);
         $content = $provider->extract('http://www.espn.com/espn/wire/_/section/ncf/id/18398497');
 
-        $this->assertInstanceOf('DayRev\Extractor\Content', $content);
+        $this->assertInstanceOf(Content::class, $content);
         $this->assertEquals($this->getExpectedEmbedlyExtractedContent(), $content);
     }
 

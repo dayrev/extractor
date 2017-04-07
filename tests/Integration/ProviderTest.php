@@ -25,10 +25,15 @@ class ProviderTest extends TestCase
         $this->assertEquals($this->getExpectedEmbedlyExtractedContent(), $content);
     }
 
+    protected function getDataFileContents(string $filename): string
+    {
+        return file_get_contents(__DIR__ . '/../Data/' . $filename);
+    }
+
     protected function getExpectedGooseExtractedContent(): Content
     {
         $content = new Content();
-        $content->text = file_get_contents(__DIR__ . '/../Data/extracted-text-goose.txt');
+        $content->text = $this->getDataFileContents('text-extract-goose.txt');
 
         return $content;
     }
@@ -36,7 +41,7 @@ class ProviderTest extends TestCase
     protected function getExpectedEmbedlyExtractedContent(): Content
     {
         $content = new Content();
-        $content->text = file_get_contents(__DIR__ . '/../Data/extracted-text-embedly.txt');
+        $content->text = $this->getDataFileContents('text-extract-embedly.txt');
 
         return $content;
     }

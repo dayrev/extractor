@@ -3,7 +3,7 @@
     "type": "library",
     "description": "Web Page Content Extractor",
     "keywords": ["extractor", "crawler", "scraper", "php", "embedly", "goose"],
-    "homepage": "https://github.org/dayrev/extractor",
+    "homepage": "https://github.com/dayrev/extractor",
     "license": "MIT",
     "authors": [
         {
